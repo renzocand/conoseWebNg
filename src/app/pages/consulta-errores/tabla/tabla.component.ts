@@ -6,16 +6,20 @@ import { CmService, Cm } from '../../../services/cm.service';
   templateUrl: './tabla.component.html',
   styles: []
 })
-export class TablaComponent implements OnInit {
+export class TablaComponent{
+
+  cargando:boolean;
+
 
   lista:Cm[] = [];
 
   constructor(private cm:CmService) {
-    this.lista = this.cm.getListCm();
-    console.log(this.lista);
+    this.cargando = true;
    }
 
-  ngOnInit() {
+   ngAfterViewInit() {
+    this.lista = this.cm.getListCm();
+    this.cargando = false;
   }
 
 }

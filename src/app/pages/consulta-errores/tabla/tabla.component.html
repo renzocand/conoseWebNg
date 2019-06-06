@@ -1,4 +1,6 @@
-<table class="table table-striped">
+<app-loading *ngIf="cargando"></app-loading>
+
+<table class="table table-striped" *ngIf="!cargando">
     <thead>
       <tr>
         <th scope="col">#</th>

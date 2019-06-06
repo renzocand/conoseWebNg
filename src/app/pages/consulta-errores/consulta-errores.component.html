@@ -1,15 +1,22 @@
 <app-navbar-shared></app-navbar-shared>
 
-<div class="container padding-container mb-5">
+<div class="container padding-container mb-5  fast fadeIn">
   <h5 class="text-center">Escriba el código del error a buscar</h5>
       <input class="form-control my-3" type="text" placeholder="0104" (keyup)="buscarCm(bcm.value)" #bcm>
 <div class="my-4">
 
-  <div *ngIf="mostrarLista()">
-      <app-tabla></app-tabla>
+  <!-- <div *ngIf="mostrarLista()">
+      <app-tabla class="animated fadeIn"></app-tabla>
+  </div> -->
+
+  <div class="jumbotron jumbotron-fluid" *ngIf="mostrarLista()">
+    <div class="container">
+      <h1 class="display-4">Aquí aparecerán las coincidencias</h1>
+      <p class="lead">Solo escribe en el buscador de arriba un número aproximado (por ejemplo 0104) y el buscador hará el resto por ti.</p>
+    </div>
   </div>
   
-    <table class="table table-striped" >
+    <table class="table table-striped" *ngIf="!mostrarLista()">
         <thead>
           <tr>
             <th scope="col">#</th>

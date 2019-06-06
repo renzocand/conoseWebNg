@@ -16,11 +16,11 @@ export class ConsultaComponent {
     
   }
 
-  // ngAfterViewInit() {
-  //   var s = document.createElement("script");
-  //   s.type = "text/javascript";
-  //   s.src = "https://www.google.com/recaptcha/api.js?render=6LdymaYUAAAAALoCevTxU1Nilf6NfWKzqYcdvrwp";
-  //   this.elementRef.nativeElement.appendChild(s);
-  // }
+  ngAfterViewInit() {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "../../../assets/js/bundles/jquery.js";
+    this.elementRef.nativeElement.appendChild(s);
+  }
 
 }

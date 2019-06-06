@@ -21,6 +21,7 @@ import { TablaComponent } from './pages/consulta-errores/tabla/tabla.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './shared/loading/loading.component';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsComponent,
     NavbarSharedComponent,
     ConsultaErroresComponent,
-    TablaComponent
+    TablaComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

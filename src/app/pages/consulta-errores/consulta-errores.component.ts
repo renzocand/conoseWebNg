@@ -11,17 +11,16 @@ export class ConsultaErroresComponent implements OnInit {
   cmList:any[] = []
   estaLleno = false;
 
-  constructor(public cm:CmService) { }
+  constructor(public cm:CmService) { 
+  }
 
   ngOnInit() {
   }
 
 
   buscarCm(termino: string) {
-    console.log(termino);
     this.estaLleno = true;
     this.cmList = this.cm.buscarCm(termino)
-    console.log(this.cmList);
   }
  
   mostrarLista(){
