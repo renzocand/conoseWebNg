@@ -1,0 +1,14 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cm of lista">
+        <th scope="row">{{cm.codigo}}</th>
+        <td>{{cm.descripcion}}</td>
+      </tr>
+    </tbody>
+  </table>

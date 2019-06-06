@@ -1,0 +1,128 @@
+@font-face
+{
+   font-family: "Helvetica";
+   src:  url("../fonts/Helvetica.ttf") format("truetype"),
+         url("../fonts/Helvetica-Bold.ttf") format("truetype"),
+         url("../fonts/helvetica-light-587ebe5a59211.ttf") format("truetype"),
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    font-size: 16px;
+}
+
+/* Mi codigo */
+.imagenes-peques {
+    width: 100px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-4 {
+    padding: 100px 0;
+}
+
+.texto-peque {
+    width: 200px;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.wraper {
+    background-image: url("../img/background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+  
+}
+
+.wraper-gris{
+    background: linear-gradient(135.24deg, rgba(0, 0, 0, 0.78) 20.11%, rgba(255, 255, 255, 0) 187.74%), #C4C4C4;
+    height: 100vh;
+    position: relative;
+}
+
+.bg-primary{
+    background-color: #2A345D!important;
+    border-color: #2A345D!important;
+}
+.btn-primary{
+    background-color: #932B2C!important;
+    border-color: #932B2C!important;
+}
+
+.btn-info{
+    background-color: #2A366F!important;
+    background-color: #2A366F!important;
+}
+
+.btn-info:hover{
+    background-color: #2A345D!important;
+    border-color: #2A345D!important;
+}
+
+.btn-primary:hover{
+    background-color: #2A345D!important;
+    border-color: #2A345D!important;
+}
+
+.texto-activado{
+    color: #2A345D;
+}
+
+
+/* ANIMACIONES */
+
+.st0{
+    fill:transparent;
+    stroke:#2A345D; 
+    stroke-width:2; 
+    stroke-miterlimit:10;
+}
+
+#candado .animated{
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease-in ;
+}
+
+#validacion .animated{
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease-in .7s;
+}
+#respaldo .animated{
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease-in 1.5s;
+}
+#persona-azul .animated{
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease-in ;
+}
+
+.padding-container{
+    padding-top: 100px ;
+}
+
+.img-form{
+    background-image: url("../../assets/img/imagen-form.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: left;
+}
+.h-80{
+    height: 80%;
+}
+
+.encuadrar{
+    padding: 120px 80px;
+}
+
+
+

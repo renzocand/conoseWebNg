@@ -1,0 +1,148 @@
+<div class="card">
+
+  <div class="card-body">
+    <h4 class="text-center">Ingrese los siguientes datos que figuran en el CPE: </h4>
+    <hr>
+    <form class="mt-5" action="/" method="post"><input name="__RequestVerificationToken" type="hidden"
+        value="_PB7ZMpKsnguo_wbSjwUDGY62XweBVAeMaDXsTfYx7Ji4gBPjC2wOKkYUnNi6A_62G8lDrdn3hGWwOjLS5Jcp6GDojjPG8JAElLHwE6Si3Y1" />
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col" for="NumeroRucEmisor">N&#250;mero de RUC del Emisor</label>
+          <div class="col-md-8">
+            <input class="form-control text-box single-line" data-val="true"
+              data-val-regex="RUC debe tener formato numerico de 11 dígitos." data-val-regex-pattern="^[0-9]{11}$"
+              data-val-required="Ingrese RUC" id="NumeroRucEmisor" maxlength="11" name="NumeroRucEmisor" type="text"
+              value="" />
+            <span class="field-validation-valid text-danger" data-valmsg-for="NumeroRucEmisor"
+              data-valmsg-replace="true"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col" for="TipoComprobante">Tipo de Comprobante</label>
+          <div class="col">
+            <select class="form-control" data-val="true"
+              data-val-number="The field Tipo de Comprobante* must be a number."
+              data-val-range="The field Tipo de Comprobante* must be between 1 and 12." data-val-range-max="12"
+              data-val-range-min="1" data-val-required="The Tipo de Comprobante* field is required."
+              id="TipoComprobante" name="TipoComprobante">
+              <option value="1">Factura Electr&#243;nica</option>
+              <option value="2">Boleta de Venta Electr&#243;nica</option>
+              <option value="3">Nota de Cr&#233;dito Electr&#243;nica – Factura</option>
+              <option value="4">Nota de Debito Electr&#243;nica – Factura</option>
+              <option value="5">Nota de Cr&#233;dito Electr&#243;nica – Boleta de Venta</option>
+              <option value="6">Nota de Debito Electr&#243;nica – Boleta de Venta</option>
+              <option value="7">Gu&#237;a de Remisi&#243;n Remitente</option>
+              <option value="8">Comprobante de Percepci&#243;n</option>
+              <option value="9">Comprobante de Retenci&#243;n </option>
+              <option value="10">Env&#237;o Resumen – Boleta de Venta</option>
+              <option value="11">Env&#237;o Resumen – Nota de Cr&#233;dito</option>
+              <option value="12">Env&#237;o Resumen –Nota de Debito</option>
+            </select>
+            <span class="field-validation-valid text-danger" data-valmsg-for="TipoComprobante"
+              data-valmsg-replace="true"></span>
+          </div>
+        </div>
+
+        <div class="form-group Receptor">
+          <label class="control-label col" for="TipoDocReceptor">Tipo de Documento de Identidad del
+            Receptor</label>
+          <div class="col">
+            <select class="form-control" data-val="true"
+              data-val-range="The field Tipo de Documento de Identidad del Receptor must be between 1 and 7."
+              data-val-range-max="7" data-val-range-min="1" id="TipoDocReceptor" name="TipoDocReceptor">
+              <option selected="selected" value="1">SIN DOCUMENTO</option>
+              <option value="2">DOC.TRIB.NO.DOM.SIN.RUC</option>
+              <option value="3">DOC. NACIONAL DE IDENTIDAD</option>
+              <option value="4">CARNET DE EXTRANJERIA</option>
+              <option value="5">REG.UNICO DE CONTRIBUYENTES</option>
+              <option value="6">PASAPORTE</option>
+              <option value="7">CED.DIPLOMATICA DE IDENTIDAD</option>
+            </select>
+            <span class="field-validation-valid text-danger" data-valmsg-for="TipoDocReceptor"
+              data-valmsg-replace="true"></span>
+          </div>
+        </div>
+
+        <div class="form-group Receptor DocumentoReceptor" style="display:none">
+          <label class="control-label col" for="DocumentoReceptor">N&#250;mero de Documento de Identidad
+            del Receptor</label>
+          <div class="col-md-5">
+            <input class="form-control text-box single-line" id="DocumentoReceptor" name="DocumentoReceptor" type="text"
+              value="" />
+            <span class="field-validation-valid text-danger" data-valmsg-for="DocumentoReceptor"
+              data-valmsg-replace="true"></span>
+          </div>
+        </div>
+
+        <div class="form-group ">
+          <label class="control-label col" for="NumeroComprobante">N&#250;mero del comprobante</label>
+
+          <div class="row px-0 mx-0 col-md-10">
+            <div class="col-4">
+              <input class="form-control text-box single-line" data-val="true"
+                data-val-length="The field SerieComprobante must be a string with a minimum length of 4 and a maximum length of 4."
+                data-val-length-max="4" data-val-length-min="4" data-val-required="Ingrese la serie"
+                id="SerieComprobante" name="SerieComprobante" type="text" value="" />
+              <span class="field-validation-valid text-danger" data-valmsg-for="SerieComprobante"
+                data-valmsg-replace="true"></span>
+            </div>
+            <div class="">
+              <label class="" style="font-size: 20px; ">-</label>
+            </div>
+            <div class="col">
+              <input class="form-control text-box single-line" data-val="true"
+                data-val-regex="Correlativo debe tener formato numerico máximo 8 dígitos."
+                data-val-regex-pattern="^[0-9]{1,8}$" data-val-required="Ingrese el correlativo" id="NumeroComprobante"
+                name="NumeroComprobante" type="text" value="" />
+              <span class="field-validation-valid text-danger" data-valmsg-for="NumeroComprobante"
+                data-valmsg-replace="true"></span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col" for="FechaEmision">Fecha de emisi&#243;n (dd/mm/aaaa)</label>
+          <div class="col-md-5">
+            <input class="form-control text-box single-line" data-val="true"
+              data-val-date="The field Fecha de emisión* (dd/mm/aaaa) must be a date."
+              data-val-required="Ingrese fecha de emisión" id="FechaEmision" name="FechaEmision" type="date"
+              value="2019-06-04" />
+            <span class="field-validation-valid text-danger" data-valmsg-for="FechaEmision"
+              data-valmsg-replace="true"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-md-4" for="ImporteTotal">Importe total</label>
+          <div class="col-md-5">
+            <input class="form-control text-box single-line" data-val="true"
+              data-val-number="The field Importe total* must be a number." data-val-required="Ingrese importe total"
+              id="ImporteTotal" name="ImporteTotal" type="text" value="0.00" />
+            <span class="field-validation-valid text-danger" data-valmsg-for="ImporteTotal"
+              data-valmsg-replace="true"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="hidden" id="human" name="human">
+
+
+        </div>
+        <div class="form-group">
+          <div class="col-md-offset-4 col-md-10">
+            <input type="submit" value="Buscar" class="btn btn-info" />
+            <input type="button" value="Cancelar" class="btn btn-default" id="cancelar-id" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-2">&nbsp;</div>
+          <label id="resultado" class="label label-default col-md-8" style="font-size:medium"></label>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>

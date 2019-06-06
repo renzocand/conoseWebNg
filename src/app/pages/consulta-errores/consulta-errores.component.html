@@ -1,0 +1,28 @@
+<app-navbar-shared></app-navbar-shared>
+
+<div class="container padding-container mb-5">
+  <h5 class="text-center">Escriba el código del error a buscar</h5>
+      <input class="form-control my-3" type="text" placeholder="0104" (keyup)="buscarCm(bcm.value)" #bcm>
+<div class="my-4">
+
+  <div *ngIf="mostrarLista()">
+      <app-tabla></app-tabla>
+  </div>
+  
+    <table class="table table-striped" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cm of cmList">
+            <th scope="row">{{cm.codigo}}</th>
+            <td>{{cm.descripcion}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>
+<!-- <app-footer></app-footer> -->
